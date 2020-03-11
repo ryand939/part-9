@@ -10,6 +10,7 @@ namespace part_9
     {
         static void Main(string[] args)
         {
+            
         }
     }
 }
