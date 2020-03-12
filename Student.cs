@@ -14,6 +14,9 @@ namespace part_9
 
         public Student(string firstName, string lastName)
         {
+            this.firstName = char.ToUpper(firstName[0]) + firstName.Substring(1);;
+            this.lastName = char.ToUpper(lastName[0]) + lastName.Substring(1);
+
             Random random = new Random();
             studentNumber = random.Next(1, 999) + 555000;
         }
@@ -26,7 +29,7 @@ namespace part_9
             }
             set
             {
-                firstName = value;
+                this.firstName = char.ToUpper(value[0]) + value.Substring(1);
             }
         }
         public string LastName
@@ -37,7 +40,7 @@ namespace part_9
             }
             set
             {
-                lastName = value;
+                this.lastName = value;
             }
         }
         public int StudentNumber
@@ -46,11 +49,10 @@ namespace part_9
             {
                 return studentNumber;
             }
-            set
-            {
-                Random random = new Random();
-                studentNumber = random.Next(1, 999) + 555000;
-            }
+        }
+        public override string ToString()
+        {
+            return firstName + " " + lastName;
         }
     }
 }

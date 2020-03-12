@@ -10,7 +10,10 @@ namespace part_9
     {
         static void Main(string[] args)
         {
-            
+            Student person = new Student("ryan", "daer");
+            Console.WriteLine(person.FirstName);
+            Console.WriteLine(person.LastName);
+            Console.WriteLine(person);
         }
     }
 }
