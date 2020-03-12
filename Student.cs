@@ -54,5 +54,9 @@ namespace part_9
         {
             return firstName + " " + lastName;
         }
+        public void reset(){
+            Random random = new Random();
+            studentNumber = random.Next(1,999) + 555000;
+        }                          
     }
 }
